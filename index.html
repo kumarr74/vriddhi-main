@@ -1,0 +1,106 @@
+# Create a folder for your landing page and step into it
+mkdir -p ~/paradigmsec-landing
+cd ~/paradigmsec-landing
+
+# Write the HTML content directly into the index.html file
+cat << 'EOF' > index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vriddhi Consulting | Re-Engineering Enterprise Posture</title>
+    <style>
+        :root {
+            --bg-main: #0B0F19;
+            --bg-card: #151D30;
+            --border-color: #233152;
+            --text-primary: #F3F4F6;
+            --text-secondary: #9CA3AF;
+            --accent: #10B981;
+            --accent-hover: #059669;
+            --accent-blue: #3B82F6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
+        header { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); }
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.05em; }
+        .logo span { color: var(--accent); }
+        .tagline-badge { background: rgba(16, 185, 129, 0.1); border: 1px solid var(--accent); color: var(--accent); padding: 0.4rem 1rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 600; }
+        .hero { max-width: 1000px; margin: 6rem auto; text-align: center; padding: 0 1.5rem; }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1.5rem; background: linear-gradient(to right, #FFFFFF, #9CA3AF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.25rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto 2.5rem auto; }
+        .cta-btn { background-color: var(--accent); color: #000000; padding: 0.8rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: background 0.2s ease; display: inline-block; }
+        .cta-btn:hover { background-color: var(--accent-hover); }
+        .philosophy-grid { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; border-top: 1px solid var(--border-color); }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .philosophy-grid { grid-template-columns: 1fr; gap: 2rem; } }
+        .philosophy-text h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1.2rem; letter-spacing: -0.02em; }
+        .philosophy-text p { color: var(--text-secondary); margin-bottom: 1rem; }
+        .quote-box { background-color: var(--bg-card); border-left: 4px solid var(--accent-blue); padding: 1.5rem; border-radius: 0 8px 8px 0; font-style: italic; color: var(--text-primary); }
+        .features-section { max-width: 1200px; margin: 4rem auto; padding: 0 1.5rem; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header h2 { font-size: 2.25rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .section-header p { color: var(--text-secondary); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 2rem; border-radius: 8px; transition: transform 0.2s ease, border-color 0.2s ease; }
+        .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+        .card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+        .card h3 span { color: var(--accent); }
+        .card p { color: var(--text-secondary); font-size: 0.95rem; }
+        footer { max-width: 1200px; margin: 6rem auto 2rem auto; padding: 2rem 1.5rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; color: var(--text-secondary); }
+        @media (max-width: 600px) { footer { flex-direction: column; gap: 1rem; text-align: center; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">VRIDDHI<span>CONSULTING</span></div>
+        <div class="tagline-badge">Sovereign Architecture</div>
+    </header>
+    <section class="hero">
+        <h1>Moving Beyond Automation to Real Enterprise Intelligence</h1>
+        <p>We are inventing the future of security transformation. By encoding elite technology advisory frameworks straight into software, we deliver non-linear execution across the data fabric.</p>
+        <a href="#platform" class="cta-btn">Explore ParadigmSec</a>
+    </section>
+    <section class="philosophy-grid">
+        <div class="philosophy-text">
+            <h2>The Reinvention of Human Capital</h2>
+            <p>Traditional cybersecurity consulting is trapped in a legacy loop: <i>More Problems = More Billable Hours</i>. This dependency naturally breeds execution friction, bloated project lifecycles, and decision fatigue.</p>
+            <p>Vriddhi Consulting was founded to break this constraint. We optimize organizational design by driving architecture directly through automated execution engines.</p>
+        </div>
+        <div class="quote-box">
+            "Service-as-a-Software represents an evolution where the focus shifts entirely from providing static tools to executing actual enterprise outcomes via model-agnostic intelligence."
+            <br><br>
+            <strong style="color: var(--accent); font-style: normal; font-size: 0.9rem;">— Kumar Raman, Founder</strong>
+        </div>
+    </section>
+    <section class="features-section" id="platform">
+        <div class="section-header">
+            <h2>Powered by ParadigmSec</h2>
+            <p>Our proprietary engine designed to automate cybersecurity maturity across People, Practice, Process, and Tools.</p>
+        </div>
+        <div class="features-grid">
+            <div class="card">
+                <h3><span>■</span> Visual Topology Parsing</h3>
+                <p>Ingest messy, high-level on-premises data center blueprints natively. Our computer vision engine decodes infrastructure layers to isolate physical nodes dynamically.</p>
+            </div>
+            <div class="card">
+                <h3><span>■</span> Agentless Multi-Fabric Hooks</h3>
+                <p>Ditch invasive local monitoring software. Connect directly via secure, read-only API hooks across public hyperscalers, private clouds, SCM systems, and local identity spaces.</p>
+            </div>
+            <div class="card">
+                <h3><span>■</span> Stateful Multi-Agent Loops</h3>
+                <p>Engineered to separate tactical logic from high-level prose. Utilizes Western-aligned reasoning engines running entirely within sovereign perimeters to analyze framework compliance.</p>
+            </div>
+            <div class="card">
+                <h3><span>■</span> Automated Paradigm Build</h3>
+                <p>Move flawlessly from your Point of Departure to your target Point of Arrival. Automatically generates ready-to-merge Terraform configurations, Ansible playbooks, and audit-ready GRC manuals.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>&copy; 2026 Vriddhi Consulting. All rights reserved.</div>
+        <div style="color: var(--text-primary); font-weight: 600;">paradigmsec.us</div>
+    </footer>
+</body>
+</html>
+EOF
